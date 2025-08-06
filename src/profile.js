@@ -59,18 +59,44 @@ export default function Profile() {
           </div>
 
           {/* Management */}
-          <h4 className="text-center mb-3" style={{ fontWeight: '600' }}>Management</h4>
-          <div className="row justify-content-center mb-5">
+          <h4 className="text-center mb-4" style={{ fontWeight: '700', fontSize: '2rem' }}>Management</h4>
+          <div className="d-flex flex-wrap justify-content-center gap-4 mb-5">
             {management.map((m, i) => (
-              <div className="col-10 col-md-4 col-lg-3 mb-4" key={i}>
-                <div style={cardStyle}>
-                  <img src={m.image} alt={m.name} className="img-fluid mb-2" />
-                  <p style={{ fontWeight: '600', marginBottom: '0.25rem' }}>{m.name}</p>
-                  <small className="text-muted">{m.title}</small>
+              <div
+                key={i}
+                style={{
+                  flex: '0 1 calc(33.33% - 2rem)', // 3 per row
+                  maxWidth: '240px',
+                  height: '340px',
+                  border: '1px solid #ddd',
+                  borderRadius: '8px',
+                  padding: '1rem',
+                  textAlign: 'center',
+                  boxShadow: '0 2px 6px rgba(0,0,0,0.1)',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  justifyContent: 'start'
+                }}
+              >
+                <div style={{ height: '180px', marginBottom: '1rem' }}>
+                  <img
+                    src={m.image}
+                    alt={m.name}
+                    style={{
+                      maxHeight: '100%',
+                      width: 'auto',
+                      objectFit: 'contain',
+                      display: 'block',
+                      margin: '0 auto'
+                    }}
+                  />
                 </div>
+                <p style={{ fontWeight: '600', fontSize: '1rem', marginBottom: '0.25rem' }}>{m.name}</p>
+                <small className="text-muted">{m.title}</small>
               </div>
             ))}
           </div>
+
 
           {/* Core Values */}
           <h4 className="text-center mb-4" style={{ color: '#006C2C', fontWeight: '800', fontSize: '2rem' }}>
