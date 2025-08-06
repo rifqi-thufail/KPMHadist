@@ -89,27 +89,35 @@ export default function Profile() {
               ))}
             </div>
           </div>
+        </div>
+      </section>
 
-          {/* Contact Us */}
-          <div className="py-4" style={{ backgroundColor: '#006C2C', color: '#fff' }}>
-            <div className="container">
-              <h4 style={{ fontWeight: '700' }}>Contact Us!</h4>
-              <ul className="list-unstyled mt-3">
-                <li className="d-flex align-items-center mb-2">
-                  <img src="/images/icons/location.svg" alt="Address" style={{ width: '24px', marginRight: '0.5rem' }} />
-                  <span>Jl. Laksamana 1 Blok H-16, Perum. Ayodya, Putat, Kec. Purwodadi, Kab. Grobogan, Indonesia.</span>
+      {/* Contact Us */}
+      <section className="contact-section py-5">
+        <div className="container-fluid">
+          <div className="row align-items-start">
+            {/* Left: Title */}
+            <div className="col-12 col-md-4 mb-4 mb-md-0">
+              <h4 className="contact-title">Contact <br /> Us!</h4>
+            </div>
+            {/* Right: Details */}
+            <div className="col-12 col-md-8">
+              <ul className="contact-list list-unstyled">
+                <li>
+                  <img src="/images/location.svg" alt="Address" /> 
+                  Jl. Laksamana 1 Blok H-16, Perum. Ayodya, Putat, Kec. Purwodadi, Kab. Grobogan, Indonesia.
                 </li>
-                <li className="d-flex align-items-center mb-2">
-                  <img src="/images/icons/email.svg" alt="Email" style={{ width: '24px', marginRight: '0.5rem' }} />
-                  <span>kpmhadist@gmail.com</span>
+                <li>
+                  <img src="/images/email.svg" alt="Email" /> 
+                  kpmhadist@gmail.com
                 </li>
-                <li className="d-flex align-items-center mb-2">
-                  <img src="/images/icons/phone.svg" alt="Phone" style={{ width: '24px', marginRight: '0.5rem' }} />
-                  <span>(+62) 8112759300</span>
+                <li>
+                  <img src="/images/phone.svg" alt="Phone" /> 
+                  (+62) 8112759300
                 </li>
-                <li className="d-flex align-items-center">
-                  <img src="/images/icons/instagram.svg" alt="Instagram" style={{ width: '24px', marginRight: '0.5rem' }} />
-                  <span>@kpmhadist</span>
+                <li>
+                  <img src="/images/instagram.svg" alt="Instagram" /> 
+                  @kpmhadist
                 </li>
               </ul>
             </div>

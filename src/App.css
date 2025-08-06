@@ -430,3 +430,44 @@
   margin-top: 2px; /* align vertikal dengan teks */
 }
 
+/* full-width hijau */
+.contact-section {
+  background-color: #006C2C;
+  color: #fff;
+  width: 100%;
+}
+
+/* Title di kiri */
+.contact-title {
+  font-size: 3rem;       /* sesuaikan besar font */
+  font-weight: 700;
+  margin-left: 25%;
+}
+
+/* List detail di kanan */
+.contact-list li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+  line-height: 1.5;
+}
+
+.contact-list li img {
+  width: 28px;
+  height: auto;
+  margin-right: 0.75rem;
+}
+
+/* Responsive spacing */
+@media (max-width: 767px) {
+  .contact-section {
+    text-align: center;
+  }
+  .contact-list li {
+    justify-content: center;
+  }
+  .contact-title {
+    margin-bottom: 1.5rem;
+  }
+}
