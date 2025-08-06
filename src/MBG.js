@@ -165,6 +165,45 @@ export default function MBG() {
           </p>
         </div>
       </section>
+
+                   {/* Footer Section */}
+              <footer className="footer bg-dark-green text-white py-5">
+                <div className="container d-flex flex-column flex-md-row justify-content-between">
+                  {/* Kolom Kiri */}
+                  <div className="footer-col mb-4 mb-md-0">
+                    <h5 className="footer-title">KPM Hadist</h5>
+                    <ul className="list-unstyled">
+                      <li><a href="/" className="footer-link">Home</a></li>
+                      <li><a href="/profile" className="footer-link">Profile</a></li>
+                      <li><a href="/mbg" className="footer-link">MBG</a></li>
+                      <li><a href="#articles" className="footer-link">Articles</a></li>
+                    </ul>
+                  </div>
+
+                  {/* Kolom Kanan */}
+                  <div className="footer-col">
+                    <h5 className="footer-title">KPM Hadist</h5>
+                    <ul className="list-unstyled">
+                      <li>
+                        <i className="bi bi-building-fill footer-icon"></i>
+                        Jl. Laksamana 1 Blok H-16, Perum. Ayodya, Putat, Kec. Purwodadi, Kab. Grobogan, Indonesia.
+                      </li>
+                      <li>
+                        <i className="bi bi-telephone-fill footer-icon"></i>
+                        (+62) 8112759300
+                      </li>
+                      <li>
+                        <i className="bi bi-envelope-fill footer-icon"></i>
+                        kpмhadist@gmail.com
+                      </li>
+                      <li>
+                        <i className="bi bi-instagram footer-icon"></i>
+                        kpmhadist
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </footer>
     </div>
   );
 }
