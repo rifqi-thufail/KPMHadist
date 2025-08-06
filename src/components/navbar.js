@@ -9,7 +9,7 @@ export default function Navbar() {
     { label: 'Profile', to: '/profile' },
     // Logo akan di tengah, jadi kita sisipkan kosong di array dan render manual
     { label: 'MBG', to: '/mbg' },
-    { label: 'Contact', to: '/contact' }
+    { label: 'Articles', to: '/articles' }
   ];
 
   return (
