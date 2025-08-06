@@ -36,3 +36,279 @@
     transform: rotate(360deg);
   }
 }
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto auto;
+  gap: 2.5rem 2rem;
+  justify-items: start;
+  align-items: start;
+  
+}
+
+.service-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.25rem;
+  max-width: 320px;
+}
+
+.icon-img {
+  width: 80px;
+  height: 80px;
+  flex-shrink: 0;
+}
+
+.service-title {
+  font-weight: 700;
+  font-size: 1.25rem;
+  margin-bottom: 0.25rem;
+}
+
+.service-desc {
+  color: #555;
+  font-size: 1.05rem;
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* Elemen ke-5 (Warehousing), ditempatkan di tengah kolom ketiga, baris ke-1 dan ke-2 (span 2) */
+.center-middle {
+  grid-row: 1 / span 2;
+  grid-column: 3;
+  align-self: center;
+}
+
+/* App.css */
+
+/* ===== About Section ===== */
+#about h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.about-title-badge {
+  background-color: #FFD55A;
+  padding: 0.5rem 2rem;
+  border-radius: 999px;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.about-box {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  max-width: 900px;
+  margin: 2rem auto;
+  gap: 1rem;
+}
+
+.about-box p {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  margin: 0;
+  z-index: 2;
+  background-color: white;
+  padding: 0.5rem;
+}
+
+.about-box-top {
+  justify-content: flex-start;
+  transform: translateX(-40px);
+}
+
+.about-box-bottom {
+  justify-content: flex-end;
+  transform: translateX(40px);
+}
+
+.about-yellow-bar {
+  width: 4px;
+  background-color: #FFD55A;
+  flex-shrink: 0;
+  height: auto;
+  min-height: 100%;
+}
+
+.about-yellow-bar.small {
+  height: 100%;
+}
+
+.about-bg-shape {
+  position: absolute;
+  top: -10px;
+  right: 20px;
+  max-width: 150px;
+  opacity: 0.08;
+  z-index: 1;
+}
+
+.about-paragraphs {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+
+.about-left, .about-right {
+  flex: 1;
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+.about-left .bar {
+  width: 5px;
+  background-color: #FFD55A;
+  margin-right: 1rem;
+}
+
+.about-left p {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 0;
+}
+
+.about-vision-mission {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  grid-template-rows: auto auto;
+  gap: 1rem 2rem;  /* baris gap 1rem, kolom gap 2rem */
+  align-items: start;
+  margin-top: 4rem; /* spasi atas */
+}
+
+/* Container Vision & Mission */
+.about-vision-mission {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Title garis besar */
+.vm-title {
+  color: #006C2C;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+/* Setiap baris jadi flex row */
+.vm-row {
+  display: flex;
+  align-items: center;    /* vertical centering */
+  margin-bottom: 2rem;
+}
+
+/* Tombol kiri */
+.vm-btn {
+  background-color: #006C2C;
+  color: #fff;
+  border: none;
+  border-radius: 999px;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  flex-shrink: 0;
+}
+
+/* Jarak antara tombol dan teks */
+.vm-text {
+  margin-left: 2rem;
+  line-height: 1.6;
+  flex:1;
+}
+
+/* Untuk paragraph Vision */
+.vm-mission {
+  grid-column: 1 / -1; /* Span full width grid */
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 0 2rem; /* jarak antar kolom */
+}
+
+.vm-mission .vm-btn {
+  grid-column: 1;
+}
+
+.vm-mission .vm-text {
+  grid-column: 2;
+}
+
+
+
+.badge-green {
+  background-color: #006C2C;
+  color: white;
+  border: none;
+  border-radius: 999px;
+  padding: 0.5rem 1.5rem;
+  font-size: 1rem;
+}
+
+.about-box {
+  position: relative;
+  flex: 1;
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  background: white;
+  padding: 1rem;
+}
+.about-box-top {
+  transform: translateX(-20px);
+}
+.about-box-bottom {
+  transform: translateX(20px);
+}
+
+@media (max-width: 768px) {
+  .about-paragraphs {
+    flex-direction: column;
+  }
+  .about-vision-mission {
+    flex-direction: column;
+  }
+  .vision-mission-left {
+    align-items: center;
+  }
+   .about-paragraphs {
+    flex-direction: column;
+  }
+  .about-box-top, .about-box-bottom {
+    transform: none;
+  }
+}
+
+.logo-box {
+  width: 360px;      /* sama semua */
+  height: 120px;      /* sama semua */
+  display: flex;     
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0);
+  border-radius: .25rem;
+}
+
+.collab-logo {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+/* Newest Articles */
+#articles {
+  background-color: #ffffff;
+}
+
+.article-card {
+  overflow: hidden;
+}
+.article-card .card-img-top {
+  height: 180px;
+  object-fit: cover;
+}
+.article-card .card-body {
+  padding: 1rem;
+}
+.article-card .stretched-link {
+  position: relative;
+  z-index: 1;
+}
