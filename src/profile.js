@@ -66,7 +66,7 @@ export default function Profile() {
                 key={i}
                 style={{
                   flex: '0 1 calc(33.33% - 2rem)', // 3 per row
-                  maxWidth: '240px',
+                  maxWidth: '440px',
                   height: '340px',
                   border: '1px solid #ddd',
                   borderRadius: '8px',
