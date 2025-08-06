@@ -126,7 +126,7 @@ export default function App() {
                             <small className="text-muted">{art.date}</small>
                             <h5 className="card-title mt-2">{art.title}</h5>
                             <p className="card-text">{art.description}</p>
-                            <a href="#" className="stretched-link text-decoration-none fw-bold">
+                            <a href="#articles" className="stretched-link text-decoration-none fw-bold">
                               Read More
                             </a>
                           </div>
