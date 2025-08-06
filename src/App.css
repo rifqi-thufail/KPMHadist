@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  font-family: "Inter", sans-serif;
 }
 
 .App-logo {
@@ -37,19 +38,23 @@
   }
 }
 
+#programs .container {
+  justify-content: center;
+}
+
+
 .services-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: auto auto;
   gap: 2.5rem 2rem;
-  justify-items: start;
+  justify-items: center;
   align-items: start;
   
 }
 
 .service-item {
   display: flex;
-  align-items: flex-start;
   gap: 1.25rem;
   max-width: 320px;
 }
@@ -296,6 +301,8 @@
 /* Newest Articles */
 #articles {
   background-color: #ffffff;
+  margin-top: -8rem;
+  margin-bottom: 1rem;
 }
 
 .article-card {
@@ -312,3 +319,114 @@
   position: relative;
   z-index: 1;
 }
+
+/* --- Commitment Section --- */
+.commitment-section {
+  text-align: center;
+  margin-top: 5rem;
+  margin-bottom: 3rem;
+}
+
+.commitment-badge {
+  display: inline-block;
+  background-color: #FFD55A;
+  color: #333;
+  font-weight: 700;
+  font-size: 1.5rem;      /* diperbesar */
+  padding: 0.75rem 3rem;  /* vertical + horizontal */
+  border-radius: 999px;
+  line-height: 1.2;
+  margin-top: 3rem; 
+}
+
+.commitment-desc {
+  margin-top: 1.5rem;
+  font-size: 1.3rem;
+  line-height: 1.6;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: justify;
+}
+
+/* --- Contact Partnerships --- */
+.contact-partnership {
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+}
+
+.contact-partnership h5 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.whatsapp-button {
+  display: inline-flex;
+  align-items: center;
+  background-color: #fff;
+  border: 1px solid #25D366;
+  border-radius: 999px;
+  padding: 0.75rem 2rem;
+  text-decoration: none;
+  color: #111;
+  font-weight: 500;
+  font-size: 1.15rem;
+  box-shadow: 0 .125rem .25rem rgba(0,0,0,.075);
+  transition: background-color .2s;
+}
+
+.whatsapp-button:hover {
+  background-color: #f0fdf4;
+}
+
+.whatsapp-icon {
+  width: 2rem;
+  height: 2rem;
+  margin-right: 1rem;
+}
+
+/* Warna background footer */
+.bg-dark-green {
+  background-color: #006C2C;
+}
+
+/* Footer umum */
+.footer {
+  font-size: 1rem;
+}
+
+/* Judul tiap kolom */
+.footer-title {
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+/* Link dan teks */
+.footer-link {
+  color: #ffffff;
+  text-decoration: none;
+}
+.footer-link:hover {
+  text-decoration: underline;
+}
+
+/* List tanpa bullet dengan jarak */
+.footer-col ul {
+  padding: 0;
+  margin: 0;
+}
+.footer-col li {
+  margin-bottom: 0.75rem;
+  display: flex;
+  align-items: start;
+  gap: 0.5rem;
+}
+
+/* Ukuran ikon dan posisi */
+.footer-icon {
+  font-size: 1.25rem;
+  line-height: 1;
+  margin-top: 2px; /* align vertikal dengan teks */
+}
+

@@ -39,19 +39,19 @@ const articles = [
     date: '1 Aug 2025',
     title: 'News Title 1',
     description: 'lorem ipsum dolor',
-    img: '/images/news1.jpg',
+    img: '/images/news.svg',
   },
   {
     date: '5 Aug 2025',
     title: 'News Title 2',
     description: 'consectetur adipiscing',
-    img: '/images/news2.jpg',
+    img: '/images/news.svg',
   },
   {
     date: '10 Aug 2025',
     title: 'News Title 3',
     description: 'sed do eiusmod',
-    img: '/images/news3.jpg',
+    img: '/images/news.svg',
   },
 ];
 
@@ -209,24 +209,68 @@ export default function App() {
                       </div>
                     ))}
                   </div>
-                  <div className="mt-5 text-center">
-                    <span className="badge bg-warning text-dark rounded-pill px-4 py-2" style={{ fontSize: '1.1rem' }}>
+                  <div className="mt-5 text-center commitment-section">
+                    <span className="commitment-badge">
                       Commitment to Indonesia’s 2045 Golden Generation
                     </span>
-                    <p className="mt-3 text-start mx-auto" style={{ maxWidth: '800px', fontSize: '1rem', lineHeight: '1.6' }}>
+                    <p className="commitment-desc">
                       The success of Indonesia's "Golden Generation 2045" mission hinges on the nutritional foundation of its people. The Free Nutritious Meal program is a critical government initiative in this endeavor. While initially funded by the national budget, its long-term success relies on a self-sustaining system. KPM HADIST is deeply committed to this vision, recognizing that active participation from non-governmental institutions is vital for achieving our shared national goals.
                     </p>
+                  </div>
+                  <div className="contact-partnership text-center">
+                    <h5>Contact Us for Partnerships</h5>
+                    <a
+                      href="https://wa.me/628112759300"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="whatsapp-button"
+                    >
+                      <img src="/images/whatsapp-icon.svg" alt="WhatsApp" className="whatsapp-icon" />
+                      (+62) 8112759300
+                    </a>
                   </div>
                 </div>
               </section>
 
-              {/* Contact Section */}
-              <section id="contact" className="py-5">
-                <div className="container">
-                  <h2>Contact</h2>
-                  <p>Hubungi kami di email: info@kpmmust.edu.id</p>
+              {/* Footer Section */}
+              <footer className="footer bg-dark-green text-white py-5">
+                <div className="container d-flex flex-column flex-md-row justify-content-between">
+                  {/* Kolom Kiri */}
+                  <div className="footer-col mb-4 mb-md-0">
+                    <h5 className="footer-title">KPM Hadist</h5>
+                    <ul className="list-unstyled">
+                      <li><a href="/" className="footer-link">Home</a></li>
+                      <li><a href="/profile" className="footer-link">Profile</a></li>
+                      <li><a href="/mbg" className="footer-link">MBG</a></li>
+                      <li><a href="#articles" className="footer-link">Articles</a></li>
+                    </ul>
+                  </div>
+
+                  {/* Kolom Kanan */}
+                  <div className="footer-col">
+                    <h5 className="footer-title">KPM Hadist</h5>
+                    <ul className="list-unstyled">
+                      <li>
+                        <i className="bi bi-building-fill footer-icon"></i>
+                        Jl. Laksamana 1 Blok H-16, Perum. Ayodya, Putat, Kec. Purwodadi, Kab. Grobogan, Indonesia.
+                      </li>
+                      <li>
+                        <i className="bi bi-telephone-fill footer-icon"></i>
+                        (+62) 8112759300
+                      </li>
+                      <li>
+                        <i className="bi bi-envelope-fill footer-icon"></i>
+                        kpмhadist@gmail.com
+                      </li>
+                      <li>
+                        <i className="bi bi-instagram footer-icon"></i>
+                        kpmhadist
+                      </li>
+                    </ul>
+                  </div>
                 </div>
-              </section>
+              </footer>
+
             </>
           }
         />
