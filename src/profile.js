@@ -21,10 +21,10 @@ const management = [
 ];
 
 const coreValues = [
-  { term: 'Ṣalawāt', desc: 'We serve with unwavering dedication, honesty, loyalty, and a commitment to just and fair practices.' },
-  { term: 'Ṣiddīq', desc: 'We constantly strive to produce new and impactful innovations and inventions.' },
-  { term: 'Originality', desc: 'We prioritize rigorous evaluation, monitoring, and balanced processes in all our work.' },
-  { term: 'Reporting', desc: 'We operate with precision, using dimensions that are both appropriate and measurable to ensure effectiveness.' }
+  { term: 'Ṣiddīq', desc: 'We serve with unwavering dedication, honesty, loyalty, and a commitment to just and fair practices.' },
+  { term: 'Originality', desc: 'We constantly strive to produce new and impactful innovations and inventions.' },
+  { term: 'Reporting', desc: 'We prioritize rigorous evaluation, monitoring, and balanced processes in all our work.' },
+  { term: 'Measured Time', desc: 'We operate with precision, using dimensions that are both appropriate and measurable to ensure effectiveness.' }
 ];
 
 const cardStyle = {
@@ -73,22 +73,26 @@ export default function Profile() {
           </div>
 
           {/* Core Values */}
-          <h4 className="text-center mb-3" style={{ color: '#006C2C', fontWeight: '700' }}>Core Values</h4>
-          <div className="row mb-5">
-            <div className="col-md-4">
-              {coreValues.map((cv, idx) => (
-                <div key={idx} className="d-flex align-items-start mb-3">
-                  <div style={{ width: '4px', backgroundColor: '#FFD55A', marginRight: '0.75rem', height: '1.5rem' }} />
-                  <p style={{ fontWeight: '600', margin: 0 }}>{cv.term}</p>
+          <h4 className="text-center mb-4" style={{ color: '#006C2C', fontWeight: '800', fontSize: '2rem' }}>
+            Core Values
+          </h4>
+          <div className="container mb-5" style={{ maxWidth: '1000px' }}>
+            {coreValues.map((cv, idx) => (
+              <div key={idx} className="row align-items-start mb-3">
+                {/* Term */}
+                <div className="col-md-3 d-flex">
+                  <div style={{ width: '6px', backgroundColor: '#FFD55A', marginRight: '0.75rem', height: '1.5rem', marginTop: '6px' }} />
+                  <p style={{ fontWeight: '700', fontSize: '1.2rem', margin: 0 }}>{cv.term}</p>
                 </div>
-              ))}
-            </div>
-            <div className="col-md-8">
-              {coreValues.map((cv, idx) => (
-                <p key={idx} style={{ marginBottom: '1rem', lineHeight: '1.6' }}>{cv.desc}</p>
-              ))}
-            </div>
+                {/* Desc */}
+                <div className="col-md-9">
+                  <p style={{ margin: 0, fontSize: '1.1rem', lineHeight: '1.5' }}>{cv.desc}</p>
+                </div>
+              </div>
+            ))}
           </div>
+
+
         </div>
       </section>
 
