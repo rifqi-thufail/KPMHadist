@@ -1,0 +1,42 @@
+name: Build and Deploy
+
+on:
+  push:
+    branches: [master, main]
+  pull_request:
+    branches: [master, main]
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout source code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "18"
+          cache: "npm"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build project
+        run: npm run build
+
+      - name: Deploy to build repository
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          personal_token: ${{ secrets.BUILD_REPO_TOKEN }}
+          external_repository: rifqi-thufail/KPMHadist-build
+          publish_dir: ./build
+          publish_branch: main
+          commit_message: "Auto-deploy from ${{ github.sha }}"
+
+      - name: Trigger Hostinger webhook
+        run: |
+          curl -X POST ${{ secrets.HOSTINGER_WEBHOOK_URL }} \
+            -H "Content-Type: application/json" \
+            -d '{"ref": "refs/heads/main", "repository": {"clone_url": "https://github.com/rifqi-thufail/KPMHadist-build.git"}}'
